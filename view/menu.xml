@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <menuitem name="IT Tools" id="menu_root" sequence="110"/>
+
+        <menuitem name="General" id="menu_general" parent="menu_root"/>
+
+        <record model="ir.actions.act_window" id="action_tests">
+            <field name="name">tests</field>
+            <field name="res_model">it_tools.test</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Tests" id="menu_tests" parent="menu_general"
+            sequence="1" action="action_tests"/>
+
+        <record model="ir.ui.view" id="test_form">
+            <field name="name">test form view</field>
+            <field name="model">it_tools.test</field>
+            <field name="arch" type="xml">
+
+                <form string="Test" version="7.0">
+                    <sheet>
+                        <h1>
+                            <field name="name" placeholder="Título de Prueba"/>
+                        </h1>
+                        <notebook>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_servers">
+            <field name="name">Servers</field>
+            <field name="res_model">it_tools.server</field>
+            <field name="view_mode">tree, form</field>
+        </record>
+
+        <menuitem name="Servers" id="menu_servers" parent="menu_general"
+            sequence="2" action="action_servers"/>
+
+
+    
+    </data>
+</openerp>
