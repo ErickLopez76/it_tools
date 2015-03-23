@@ -44,6 +44,9 @@
         <menuitem name="Servers" id="menu_servers" parent="menu_general"
             sequence="2" action="action_servers"/>
 
+        <record model="ir.ui.view" id="servers_form">
+            <field name="name">servers</field>
+            <field name="model">it_tools.server</field>
 
     
     </data>
