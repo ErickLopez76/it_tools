@@ -38,16 +38,25 @@
         <record model="ir.actions.act_window" id="action_servers">
             <field name="name">Servers</field>
             <field name="res_model">it_tools.server</field>
-            <field name="view_mode">tree, form</field>
+            <field name="view_mode">tree,form</field>
         </record>
 
         <menuitem name="Servers" id="menu_servers" parent="menu_general"
             sequence="2" action="action_servers"/>
 
         <record model="ir.ui.view" id="servers_form">
-            <field name="name">servers</field>
+            <field name="name">server form view</field>
             <field name="model">it_tools.server</field>
+            <field name="arch" type="xml">
 
-    
+                <form string="Server form">
+                    <sheet>
+                        <h1>
+                            <field name="name" placeholder="Nombre de servidor"/>
+                        </h1>
+                    </sheet>
+                </form>
+            </field>
+        </record> 
     </data>
 </openerp>
