@@ -54,6 +54,15 @@
                         <h1>
                             <field name="name" placeholder="Nombre de servidor"/>
                         </h1>
+                        <notebook>
+                            <page string="Descripción">
+                                <field name="description"/>
+                                <group>
+                                    <field name="cores"/>
+                                    <field name="os" string="Sistema Operativo"/>
+                                </group>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
