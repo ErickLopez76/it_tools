@@ -49,41 +49,17 @@
 
         <record model="ir.ui.view" id="servers_form">
             <field name="name">server form view</field>
-            <field name="model">ait_tools.server</field>
+            <field name="model">it_tools.server</field>
             <field name="arch" type="xml">
                 <form string="Server form">
                     <sheet>
                         <h1>
                             <field name="name" placeholder="Nombre de servidor"/>
                         </h1>
-                        <group col="4">
-                            <field name="cores"/>
-                            <field name="os"/>
-                                <field name="hdd"/>
-                            <div>
-                                <field name="capacity" on_change="1" modifiers="{}"/>
-                            </div>
-                            <newline/>
-                            <field name="ip"/>
-                            <field name="rootpass"/>
-                            <field name="services"/>
-                        </group>
                     </sheet>
                 </form>
             </field>
         </record>
 
-        <record model="ir.actions.act_window" id="action_services">
-            <field name="name">Services</field>
-            <field name="res_model">ait_tools.services</field>
-            <field name="view_mode">tree,form</field>
-        </record>
-
-
-        <menuitem name="Services" id="menu_services" parent="menu_general"
-            sequence="3" action="action_services"/>
-
-
-    
-    </data>
+   </data>
 </openerp>

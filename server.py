@@ -10,8 +10,11 @@ class server(models.Model):
     os = fields.Char(string="OS")
     hdd = fields.Integer(string="Capacidad Disco")
     ip = fields.Char(string="Direccion IP")
+    rootpass = fields.Char(string="Root Password")
 
     capacity = fields.Many2one('ait_tools.capacity', requiered=False)
+
+    services = fields.One2many('ait_tools.services', 'server')
 
     @api.onchange('capacity')
     def _onchange_course(self):
