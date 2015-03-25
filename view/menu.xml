@@ -6,28 +6,31 @@
 
         <menuitem name="General" id="menu_general" parent="menu_root"/>
 
-        <record model="ir.actions.act_window" id="action_tests">
-            <field name="name">tests</field>
-            <field name="res_model">it_tools.test</field>
+        <record model="ir.actions.act_window" id="action_capacity">
+            <field name="name">capacity</field>
+            <field name="res_model">ait_tools.capacity</field>
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem name="Tests" id="menu_tests" parent="menu_general"
-            sequence="1" action="action_tests"/>
+        <menuitem name="Capacidades" id="menu_capacity" parent="menu_general"
+            sequence="2" action="action_capacity"/>
 
-        <record model="ir.ui.view" id="test_form">
-            <field name="name">test form view</field>
-            <field name="model">it_tools.test</field>
+        <record model="ir.ui.view" id="capacity_form">
+            <field name="name">capacity form view</field>
+            <field name="model">ait_tools.capacity</field>
             <field name="arch" type="xml">
 
-                <form string="Test" version="7.0">
+                <form string="Capacities" version="7.0">
                     <sheet>
                         <h1>
-                            <field name="name" placeholder="Título de Prueba"/>
+                            <field name="name" placeholder="Título de Capacidad"/>
                         </h1>
                         <notebook>
                             <page string="Description">
                                 <field name="description"/>
+                            </page>
+                            <page string="Servers">
+                                <field name="servers"/>
                             </page>
                         </notebook>
                     </sheet>
@@ -37,35 +40,12 @@
 
         <record model="ir.actions.act_window" id="action_servers">
             <field name="name">Servers</field>
-            <field name="res_model">it_tools.server</field>
+            <field name="res_model">ait_tools.server</field>
             <field name="view_mode">tree,form</field>
         </record>
 
         <menuitem name="Servers" id="menu_servers" parent="menu_general"
-            sequence="2" action="action_servers"/>
+            sequence="1" action="action_servers"/>
 
-        <record model="ir.ui.view" id="servers_form">
-            <field name="name">server form view</field>
-            <field name="model">it_tools.server</field>
-            <field name="arch" type="xml">
-
-                <form string="Server form">
-                    <sheet>
-                        <h1>
-                            <field name="name" placeholder="Nombre de servidor"/>
-                        </h1>
-                        <notebook>
-                            <page string="Descripción">
-                                <field name="description"/>
-                                <group>
-                                    <field name="cores"/>
-                                    <field name="os" string="Sistema Operativo"/>
-                                </group>
-                            </page>
-                        </notebook>
-                    </sheet>
-                </form>
-            </field>
-        </record> 
-    </data>
+   </data>
 </openerp>
