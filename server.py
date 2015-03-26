@@ -16,6 +16,8 @@ class server(models.Model):
 
     services = fields.One2many('ait_tools.services', 'server')
 
+    server_services = fields.Many2one('ait_tools.server_services')
+
     @api.onchange('capacity')
     def _onchange_course(self):
         if not self.name:

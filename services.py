@@ -8,6 +8,8 @@ class services(models.Model):
 
     server = fields.Many2one('ait_tools.server',required=False)
 
+    server_services = fields.Many2one('ait_tools.server_services')
+
     @api.onchange('server')
     def _onchange_course(self):
         if not self.name:

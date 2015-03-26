@@ -67,6 +67,7 @@
                             <field name="ip"/>
                             <field name="rootpass"/>
                             <field name="services"/>
+                            <field name="server_services"/>
                         </group>
                     </sheet>
                 </form>
