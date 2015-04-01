@@ -66,9 +66,9 @@
                             <newline/>
                             <field name="ip"/>
                             <field name="rootpass"/>
-                            <field name="services"/>
-                            <field name="server_services"/>
-                            <field name="services2"/>
+                            <field name="useradmin"/>
+                            <field name="adminpass"/>
+                            <field name="services" string="Servicios"/>
                         </group>
                     </sheet>
                 </form>
@@ -85,12 +85,12 @@
         <menuitem name="Services" id="menu_services" parent="menu_general"
             sequence="3" action="action_services"/>
 
-        <record model="ir.ui.view" id="services2_form">
-            <field name="name">services2 form view</field>
-            <field name="model">ait_tools.services2</field>
+        <record model="ir.ui.view" id="services_form">
+            <field name="name">services form view</field>
+            <field name="model">ait_tools.services</field>
             <field name="arch" type="xml">
 
-                <form string="Services2" version="7.0">
+                <form string="Services" version="7.0">
                     <sheet>
                         <h1>
                             <field name="name" placeholder="Título de Servicio"/>

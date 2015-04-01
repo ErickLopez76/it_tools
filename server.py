@@ -1,11 +1,11 @@
 from openerp import models, fields, api
 
-class capacity(models.Model)
-    _name = 'ait_tools.capacity'
+#class capacity(models.Model):
+#    _name = 'ait_tools.capacity'
 
-    name = fields.Char(string='Title', requiered=True)
-    description = fields.Text()
-    servers = fields.One2many('ait_tools.server','capacity')
+#    name = fields.Char(string='Title', required=True)
+#    description = fields.Text()
+#    servers = fields.One2many('ait_tools.server','capacity')
 
 class server(models.Model):
     _name = 'ait_tools.server'
@@ -18,14 +18,11 @@ class server(models.Model):
     hdd = fields.Integer(string="Capacidad Disco")
     ip = fields.Char(string="Direccion IP")
     rootpass = fields.Char(string="Root Password")
-
+    useradmin = fields.Char(string="Admin User")
+    adminpass = fields.Char(string="Admin Pass")
     capacity = fields.Many2one('ait_tools.capacity', required=False)
 
-    services = fields.One2many('ait_tools.services', 'server')
-
-    server_services = fields.Many2one('ait_tools.server_services',required=False)
-
-    services2 = fields.Many2many('ait_tools.services2')
+    services = fields.Many2many('ait_tools.services')
 
 #    @api.onchange('capacity')
 #    def _onchange_course(self):
