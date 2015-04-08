@@ -1,5 +1,5 @@
 {
-    'name': 'aIT Tools',
+    'name': 'IT Tools',
     'version': '1.0',
     'category': 'Tools',
     'summary': 'Herramientas para IT, Servidores, clientes, etc',

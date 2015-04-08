@@ -1,0 +1,41 @@
+        <record model="ir.actions.act_window" id="action_sede">
+            <field name="name">Sedes</field>
+            <field name="res_model">it_tools.sede</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+        <menuitem name="Sedes" id="menu_sede" parent="menu_general"
+            sequence="4" action="action_sede"/>
+
+        <record model="ir.ui.view" id="sede_form">
+            <field name="name">sede form view</field>
+            <field name="model">it_tools.sede</field>
+            <field name="arch" type="xml">
+
+                <form string="Sede" version="7.0">
+                    <sheet>
+                        <h1>
+                            <field name="name" placeholder="Sede"/>
+                        </h1>
+                        <notebook>
+                            <page string="Description">
+                                <field name="description"/>
+                                <field name="direccion"/>
+                                <field name="num_phone"/>
+                                <field name="short_phone"/>
+                                <field name="ext_it"/>
+                                <field name="ips_data"/>
+                                <field name="ips_phone"/>
+                                <field name="net_data"/>
+                                <field name="servers"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+

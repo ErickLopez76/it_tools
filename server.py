@@ -1,14 +1,7 @@
 from openerp import models, fields, api
 
-#class capacity(models.Model):
-#    _name = 'ait_tools.capacity'
-
-#    name = fields.Char(string='Title', required=True)
-#    description = fields.Text()
-#    servers = fields.One2many('ait_tools.server','capacity')
-
 class server(models.Model):
-    _name = 'ait_tools.server'
+    _name = 'it_tools.server'
 
     name = fields.Char(string='Title', required=True)
     description =  fields.Text()
@@ -20,9 +13,9 @@ class server(models.Model):
     rootpass = fields.Char(string="Root Password")
     useradmin = fields.Char(string="Admin User")
     adminpass = fields.Char(string="Admin Pass")
-    capacity = fields.Many2one('ait_tools.capacity', required=False)
+    capacity = fields.Many2one('it_tools.capacity', required=False)
 
-    services = fields.Many2many('ait_tools.services')
+    services = fields.Many2many('it_tools.services')
 
 #    @api.onchange('capacity')
 #    def _onchange_course(self):

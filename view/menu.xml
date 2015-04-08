@@ -8,16 +8,16 @@
 
         <record model="ir.actions.act_window" id="action_capacity">
             <field name="name">capacity</field>
-            <field name="res_model">ait_tools.capacity</field>
+            <field name="res_model">it_tools.capacity</field>
             <field name="view_mode">tree,form</field>
         </record>
 
         <menuitem name="Capacidades" id="menu_capacity" parent="menu_general"
-            sequence="2" action="action_capacity"/>
+            sequence="3" action="action_capacity"/>
 
         <record model="ir.ui.view" id="capacity_form">
             <field name="name">capacity form view</field>
-            <field name="model">ait_tools.capacity</field>
+            <field name="model">it_tools.capacity</field>
             <field name="arch" type="xml">
 
                 <form string="Capacities" version="7.0">
@@ -40,16 +40,16 @@
 
         <record model="ir.actions.act_window" id="action_servers">
             <field name="name">Servers</field>
-            <field name="res_model">ait_tools.server</field>
+            <field name="res_model">it_tools.server</field>
             <field name="view_mode">tree,form</field>
         </record>
 
         <menuitem name="Servers" id="menu_servers" parent="menu_general"
-            sequence="1" action="action_servers"/>
+            sequence="2" action="action_servers"/>
 
         <record model="ir.ui.view" id="servers_form">
             <field name="name">server form view</field>
-            <field name="model">ait_tools.server</field>
+            <field name="model">it_tools.server</field>
             <field name="arch" type="xml">
                 <form string="Server form">
                     <sheet>
@@ -77,17 +77,17 @@
 
         <record model="ir.actions.act_window" id="action_services">
             <field name="name">Services</field>
-            <field name="res_model">ait_tools.services</field>
+            <field name="res_model">it_tools.services</field>
             <field name="view_mode">tree,form</field>
         </record>
 
 
         <menuitem name="Services" id="menu_services" parent="menu_general"
-            sequence="3" action="action_services"/>
+            sequence="4" action="action_services"/>
 
         <record model="ir.ui.view" id="services_form">
             <field name="name">services form view</field>
-            <field name="model">ait_tools.services</field>
+            <field name="model">it_tools.services</field>
             <field name="arch" type="xml">
 
                 <form string="Services" version="7.0">
@@ -105,7 +105,45 @@
             </field>
         </record>
 
+        <record model="ir.actions.act_window" id="action_ubicacion">
+            <field name="name">Ubicacion</field>
+            <field name="res_model">it_tools.ubicacion</field>
+            <field name="view_mode">tree,form</field>
+        </record>
 
-    
+
+        <menuitem name="Ubicacion" id="menu_ubicacion" parent="menu_general"
+            sequence="1" action="action_ubicacion"/>
+
+        <record model="ir.ui.view" id="ubicacion_form">
+            <field name="name">ubicacion form view</field>
+            <field name="model">it_tools.ubicacion</field>
+            <field name="arch" type="xml">
+
+                <form string="Ubicacion" version="7.0">
+                    <sheet>
+                        <h1>
+                            <field name="name" placeholder="Nombre Corto"/>
+                        </h1>
+                        <group col="4">
+                            <field name="nombre"/>
+                            <field name="direccion" string="Dirección"/>
+                            <field name="phone" string="Teléfono"/>
+                            <field name="short_phone" string="Numeración Corta"/>
+                            <field name="ext_it" string="Extensión IT"/>
+                            <field name="net_data" string="IP's datos"/>
+                            <field name="net_phone" string="IP's Telefonía"/>
+                        </group>
+                        <group>
+                            <field name="servers" string="Servidores"/>
+                            <field name="net_info" string="Net Info"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+
     </data>
 </openerp>
