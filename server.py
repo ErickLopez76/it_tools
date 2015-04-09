@@ -14,6 +14,7 @@ class server(models.Model):
     useradmin = fields.Char(string="Admin User")
     adminpass = fields.Char(string="Admin Pass")
     capacity = fields.Many2one('it_tools.capacity', required=False)
+    capacity_mem = fields.Many2one('it_tools.capacity', required=False)
 
     services = fields.Many2many('it_tools.services')
 

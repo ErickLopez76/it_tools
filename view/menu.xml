@@ -59,10 +59,14 @@
                         <group col="4">
                             <field name="cores"/>
                             <field name="os"/>
-                            <field name="memory"/>
-                            <field name="hdd"/>
-                            <div>
+                            <field name="hdd" string="HDD"/>
+                             <div>
                                 <field name="capacity" on_change="1" modifiers="{}"/>
+                            </div>
+                            <newline/>
+                            <field name="memory"/>
+                            <div>
+                                <field name="capacity_mem" on_change="1" modifiers="{}"/>
                             </div>
                             <newline/>
                             <field name="ip"/>
