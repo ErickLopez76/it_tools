@@ -74,6 +74,7 @@
                             <field name="useradmin"/>
                             <field name="adminpass"/>
                             <field name="services" string="Servicios"/>
+                            <field name="description" string="Notas"/>
                         </group>
                     </sheet>
                 </form>
